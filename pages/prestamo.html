@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>TinyBank</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+      <div class="titleLogoFlex">
+        <img src="../images/LOGO.png" class="logo" alt="logo"> 
+        <h1>TinyBank</h1>
+      </div>
+        
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/pages/prestamo.html">PRESTAMO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/pages/crypto.html">CRYPTO</a>
+            </li>
+
+    </header>
+
+    <h1>Simulador de Prestamo Personal</h1>
+    <p>Solicita un prestamo y usalo como vos quieras!</p>
+    <p>Hasta 5.000.000</p>
+    <p>Hasta 72 meses</p>
+    <p>Tasa fija</p>
+    <form action="get">
+        <label for="monto">Importe solicitado</label>
+        <input type="number" id="monto">
+        <label for="cuotas">Plazo en meses</label>
+        <input type="number" id="cuotas">
+        <input type="button" value="Solicitar">
+        <input type="reset">
+    </form>
+    <p>
+        Préstamo sujeto a evaluación crediticia por parte del TinyBank.
+        El resultado que surja del presente simulador de préstamos es meramente indicativo y no constituye una oferta ni una aceptación de la solicitud que realice el cliente. Los valores informados son de carácter estimativos.
+        Para acceder al préstamo, el usuario deberá completar en su totalidad la solicitud y no registrar antecedentes desfavorables en el sistema financiero. Para mayor información comuníquese con nuestro Centro de Contacto Telefónico: 0810-111-1111
+    </p>
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="./js/prestamo.js"></script>
+</body>
+</html>
