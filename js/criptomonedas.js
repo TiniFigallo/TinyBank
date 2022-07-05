@@ -51,9 +51,12 @@ const listaCrypto = [
 
 // RECORDAR AGREGAR PARA QUE SE PUEDA PONER CANTIDADES EN EL CARRITO|
 const addCarrito = (crypto) => {
-    
         carrito.push(crypto)
-        alert("Agregaste " + crypto.name + " a tu compra.")
+        Swal.fire({
+            icon: 'success',
+            title: ("Agregaste " + crypto.name + " a tu compra."),
+          })
+     //   alert("Agregaste " + crypto.name + " a tu compra.")
         detalleCompra.innerHTML = ``
         showCarrito()
         console.log(carrito)
@@ -88,7 +91,7 @@ let carrito = []
 
 const loadPage = () => {
     if (JSON.parse(localStorage.getItem("Cart"))) {
-        carrito = JSON.parse(localStorage.geteItem("Cart"))
+        carrito = JSON.parse(localStorage.getItem("Cart"))
     } else {
         localStorage.setItem("Cart", JSON.stringify([]))
         carrito = JSON.parse(localStorage.getItem("Cart"))

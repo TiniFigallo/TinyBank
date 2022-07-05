@@ -88,3 +88,34 @@ section.backgroundIndex {
     border-style: none;
     background-color:  rgb(117, 220, 117);
 }
+
+
+/* ESTILOS PRESTAMOS */
+
+.divPrestamo {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+font-family:'Raleway', sans-serif;
+color: black;
+}
+
+.formPrestamo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#formularioPrestamo {
+    display: flex;
+    flex-direction: column;
+}
+#detallesPrestamo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 400px;
+    background-color: rgb(212, 246, 119);
+    color: green;
+}
