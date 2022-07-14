@@ -1,4 +1,6 @@
-const listaCrypto = [
+
+
+/*const listaCrypto =  [
 {
     name: "Bitcoin",
     price: 21300,
@@ -47,7 +49,36 @@ const listaCrypto = [
     img: "../images/criptomonedas/tether.png",
     id: 08
 }
-]
+] */
+let listaCrypto;
+
+fetch('/json/crypto.json')
+.then(respuesta => respuesta.json())
+.then(info => {
+    console.log(info);
+    listaCrypto = info;
+    for (const crypto of listaCrypto) {
+            let card = document.createElement('div')
+            card.setAttribute('class', 'divCard')
+           
+            card.innerHTML += `
+            <img src="${crypto.img}" class="imgCards"></img>
+            <h3>${crypto.name}</h3>
+            <p> US$ ${crypto.price}</p>`
+            
+            let botonAddCart = document.createElement("button")
+            botonAddCart.addEventListener("click", () => addCarrito(crypto))
+            botonAddCart.innerText = "Agregar al Carrito"
+            botonAddCart.setAttribute("class", "addCart")
+            card.appendChild(botonAddCart)
+            
+            showCryptos.append(card)
+    }
+})
+.catch(error => console.log(error));
+
+
+
 
 // RECORDAR AGREGAR PARA QUE SE PUEDA PONER CANTIDADES EN EL CARRITO|
 const addCarrito = (crypto) => {
@@ -61,10 +92,10 @@ const addCarrito = (crypto) => {
         showCarrito()
         console.log(carrito)
         
-        localStorage.setItem("Cart", carrito);
+        localStorage.setItem("carrito", JSON.stringify(carrito));
 } 
 
-let showCryptos = document.getElementById("showCryptos")
+/* let showCryptos = document.getElementById("showCryptos")
 const mostrarCryptos = () => {
     listaCrypto.forEach((crypto) => {
         let card = document.createElement('div')
@@ -85,23 +116,23 @@ const mostrarCryptos = () => {
     })   
     
 }
-mostrarCryptos()
+mostrarCryptos() */
 
-let carrito = []
+let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
-const loadPage = () => {
-    if (JSON.parse(localStorage.getItem("Cart"))) {
-        carrito = JSON.parse(localStorage.getItem("Cart"))
-    } else {
-        localStorage.setItem("Cart", JSON.stringify([]))
-        carrito = JSON.parse(localStorage.getItem("Cart"))
-    }
-}
-loadPage()
 
 let detalleCompra = document.getElementById('detalleCompra')
 let buttonDeleteCart = document.createElement("button")
+
 //MOSTRAR CARRITO
+
+let carritoVacio = document.createElement("h4")
+
+if(!carrito.length) {
+carritoVacio.innerText = ("No tienes cryptos en tu lista de compra.")
+detalleCompra.append(carritoVacio)
+} 
+
 
 const showCarrito = () => {
         carritoVacio.remove()
@@ -124,19 +155,19 @@ const showCarrito = () => {
             carrito = []
             detalleCompra.innerHTML=``
             console.log(carrito)
-        }
-        
-       
+        }   
 }
-    
+const loadPage = () => {
+    if (JSON.parse(localStorage.getItem('carrito'))) {
+        carrito = JSON.parse(localStorage.getItem("carrito"))
+        showCarrito()
+    } else {
+        localStorage.setItem("Cart", JSON.stringify([]))
+        carrito = JSON.parse(localStorage.getItem("Cart"))
+    }
+}
+loadPage() 
 
-
-let carritoVacio = document.createElement("h4")
-
-if(!carrito.length) {
-carritoVacio.innerText = ("No tienes cryptos en tu lista de compra.")
-detalleCompra.append(carritoVacio)
-} 
 
 
 //CALCULO DE PRECIO TOTAL

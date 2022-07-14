@@ -1,0 +1,51 @@
+[
+    {
+        "name": "Bitcoin",
+        "price": "21300",
+        "img": "../images/criptomonedas/bitcoin.png",
+        "id": "001"
+    },
+    {
+        "name": "Dash",
+        "price": "47",
+        "img": "../images/criptomonedas/dash.png",
+        "id": "002"
+    },
+    {
+        "name": "Litecoin",
+        "price": "53",
+        "img": "../images/criptomonedas/litecoin.png",
+        "id": "003"
+    },
+    {
+        "name": "Ether",
+        "price": "1130",
+        "img": "../images/criptomonedas/ether.png",
+        "id":"004"
+    },
+    {
+        "name": "Monero",
+        "price": "120000",
+        "img":"../images/criptomonedas/monero.png",
+        "id": "005"
+    },
+
+    {
+        "name": "Solana",
+        "price": "34",
+        "img": "../images/criptomonedas/solana.png",
+        "id": "006"
+    },
+    {
+        "name": "BNB",
+        "price": "220",
+        "img": "../images/criptomonedas/bnb.png",
+        "id": "007"
+    },
+    {
+        "name": "Tether",
+        "price": "1",
+        "img": "../images/criptomonedas/tether.png",
+        "id": "08"
+    }
+    ]
