@@ -23,6 +23,9 @@ header img {
     flex-direction: row;
     align-items: center;
 }
+
+
+
 .warnings {
     width: 200px;
     text-align: center;
@@ -53,21 +56,56 @@ section.backgroundIndex {
     background-size: cover;
 }
 
+/*ESTILOS HOME  */
+#home { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+#home h1 {
+    height: 100px;
+}
+.table-sm {
+    width: 900px !important;
+}
+#movimientos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-style: black solid 1px;
+    width: 400px !important;
+}
+
 /* ESTILOS CRIPTOMONEDAS */
 
 #showCryptos {
+    
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
+    width: 600px;
+    margin: auto;
 }
-.detalleCompra {
-    border-style: 1px solid rgb(122, 211, 122);
+#detalleCompra {
+    border-style: 1px solid black;
+    font-family: 'Roboto Serif', serif;
+    width: 500px;
+    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
+#detalleCompra h4 {
+    font-size: medium;
+    padding: 20px;
+}
+
 .imgCardsCarrito{
     height: 50px;
     width: 50px;
@@ -79,10 +117,13 @@ section.backgroundIndex {
     align-items: center;  
 }
 .divCard {
-    height: 300px;
-    width: 150px;
+    display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    padding: 10px 0 0 0;
+    height: 300px;
+    width: 150px;
 }
 .divCard img {
     height: 100px;
@@ -97,6 +138,14 @@ section.backgroundIndex {
 
 /* ESTILOS PRESTAMOS */
 
+#seccion_prestamo {
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+padding: 20px;
+}
+
 .divPrestamo {
 display: flex;
 justify-content: center;
@@ -105,13 +154,19 @@ flex-direction: column;
 font-family:'Raleway', sans-serif;
 color: black;
 }
-
+.btn_prestamo {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0 10px 0;
+}
 .formPrestamo {
+
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#formularioPrestamo {
+.formPrestamo label, input{
+    padding: 10px;
     display: flex;
     flex-direction: column;
 }
@@ -123,4 +178,17 @@ color: black;
     width: 400px;
     background-color: rgb(212, 246, 119);
     color: green;
+}
+.p_condiciones {
+    width: 900px;
+}
+
+footer {
+    background-color:#279d2e;
+    margin-top: 30px;
+    padding: 50px 0 50px 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

@@ -1,10 +1,8 @@
 // SIMULADOR PRESTAMO 
+const seccion_prestamo = document.getElementById("seccion_prestamo")
 const formularioPrestamo = document.getElementById("formularioPrestamo")
 const monto = document.getElementById("monto")
 const cuotas = document.getElementById("cuotas")
-
-
-
 
 
 formularioPrestamo.addEventListener('submit', (e) => {

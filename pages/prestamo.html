@@ -9,7 +9,9 @@
     <!-- CSS only -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Raleway:wght@100&family=Roboto+Serif:opsz,wght@8..144,400;8..144,600&family=Rouge+Script&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Raleway&family=Roboto+Serif:opsz,wght@8..144,400;8..144,600&family=Rouge+Script&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 
@@ -21,42 +23,56 @@
       </div>
         
         <ul class="nav nav-tabs">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/pages/prestamo.html">PRESTAMO</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/pages/crypto.html">CRYPTO</a>
-            </li>
+          <li class="nav-item">
+            <a class="nav-link"  aria-current="page" href="home.html" class="btn_home">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" type="button" onclick="irPrestamo()" aria-current="page" href="/pages/prestamo.html" class="btn_prestamo">PRESTAMO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/crypto.html">CRYPTO</a>
+          </li>
 
     </header>
-
+    <div id="seccion_prestamo">
     <div class="divPrestamo">
-    <h1>Simulador de Prestamo Personal</h1>
-    <p>Solicita un prestamo y usalo como vos quieras!</p>
-    <p>Hasta 5.000.000</p>
-    <p>Hasta 72 meses</p>
-    <p>Tasa fija</p>
-  </div>
-  <div class="formPrestamo">
-    <form id="formularioPrestamo">
+      <h1>Simulador de Prestamo Personal</h1>
+      <p>Solicita un prestamo y usalo como vos quieras!</p>
+      <p>Hasta 5.000.000</p>
+      <p>Hasta 72 meses</p>
+      <p>Tasa fija</p>
+    </div>
+    <div class="formPrestamo">
+      <form id="formularioPrestamo">
+        <fieldset>
         <label for="monto">Importe solicitado</label>
-        <input type="number" id="monto">
+        <input type="number" id="monto" class="form-control">
         <label for="cuotas">Plazo en meses</label>
-        <input type="number" id="cuotas">
-        <input type="submit" value="Solicitar">
-        <input type="reset">
-    </form>
-  </div>
-
-    <p class="">
+        <input type="number" id="cuotas" class="form-control">
+        <div class="btn_prestamo">
+          <input type="submit" value="Solicitar" class="btn btn-outline-success">
+          <input type="reset" class="btn btn-outline-danger">
+        </div>
+      </fieldset>
+      </form>
+    
+    </div>
+    
+    <p class="p_condiciones">
         Préstamo sujeto a evaluación crediticia por parte del TinyBank.
         El resultado que surja del presente simulador de préstamos es meramente indicativo y no constituye una oferta ni una aceptación de la solicitud que realice el cliente. Los valores informados son de carácter estimativos.
         Para acceder al préstamo, el usuario deberá completar en su totalidad la solicitud y no registrar antecedentes desfavorables en el sistema financiero. Para mayor información comuníquese con nuestro Centro de Contacto Telefónico: 0810-111-1111
     </p>
+  </div>
+
+  <footer>
+    <p>© 2022 TinyBank | Todos los derechos reservados | Ventanilla Única Federal | Términos y Condiciones TINIBANK</p>
+  </footer>
     <!-- JavaScript Bundle with Popper -->
    
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <script src="../js/prestamo.js"></script>
+    <script src="../js/index.js"></script>
 </body>
 </html>
