@@ -37,11 +37,11 @@ const addCarrito = (crypto) => {
             title: ("Agregaste " + crypto.name + " a tu compra."),
           })
         detalleCompra.innerHTML = ``
-
         showCarrito()
-        
         localStorage.setItem("carrito", JSON.stringify(carrito));
 } 
+
+
 
 
 

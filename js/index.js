@@ -37,7 +37,7 @@ ingresar() */
 
 const password = document.getElementById('password')
 
-console.log(password)
+
 
 
 

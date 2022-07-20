@@ -72,12 +72,18 @@ section.backgroundIndex {
     width: 900px !important;
 }
 #movimientos {
+    margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border-style: black solid 1px;
-    width: 400px !important;
+    font-family: 'Roboto Serif', serif;
+}
+#movimientos h3 {
+    font-size: large;
+}
+#movimientos h4 {
+    font-size: medium;
 }
 
 /* ESTILOS CRIPTOMONEDAS */

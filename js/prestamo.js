@@ -4,6 +4,7 @@ const formularioPrestamo = document.getElementById("formularioPrestamo")
 const monto = document.getElementById("monto")
 const cuotas = document.getElementById("cuotas")
 
+let accion; 
 
 formularioPrestamo.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -12,6 +13,10 @@ formularioPrestamo.addEventListener('submit', (e) => {
     formularioPrestamo.append(detallesPrestamo)
     detallesPrestamo.innerHTML = `
     <p>Estás solicitando un prestamo por ${monto.value} a pagar en ${cuotas.value} meses por un total de ${totalPrestamo()}.</p>`
+    
+/*     accion = `Solicitaste un prestamo por ${monto.value}`
+    addMov()
+    console.log(movimientos) */
 });
 
 
@@ -20,6 +25,7 @@ const totalPrestamo = () => {
     total = monto.value * interes/cuotas.value;
     return total
 }
+
 
 
 /* 
