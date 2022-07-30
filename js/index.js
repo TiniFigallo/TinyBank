@@ -1,8 +1,9 @@
-/* 
-const form = document.getElementById('formSignIn')
+const form = document.getElementById("formSignIn");
+const userName = document.getElementById("username");
+const password = document.getElementById("password");
 const p_warnings = document.getElementById ("warnings")
- */
-/* form.addEventListener("sumbit", (e)=>{
+
+ form.addEventListener("submit", (e)=>{
     e.preventDefault()
     let warnings = ""
     let entrar = false
@@ -10,34 +11,27 @@ const p_warnings = document.getElementById ("warnings")
     if(userName.value.length <5){
         warnings += `El nombre muy corto.<br>`
         entrar = true
-    }
-    if(password.value.length <= 8) {
+    }if(password.value.length <= 8) {
         warnings += `La contraseña debe tener 8 digitos mínimo.<br>`
         entrar = true
-    }
-    if (entrar) {
+    }if (entrar) {
         p_warnings.innerHTML = warnings
+    }else{
+        location.replace("./pages/home.html")
     }
+    })
+ 
+/* form.addEventListener("submit",(e) => {
+    e.preventDefault();  
+    //form = e.target;
+    let user = userName.value;
+    let pass = form.children[1].children['password'].value;
+
+    console.log(user);
+    console.log(pass);
+
 
 }) */
-/* 
-const form = document.getElementById('formSignIn')
-
-const ingresar = (e) => {
-    e.preventDefault();
-    form = e.target; 
-
-    let userName = formulario.children[0].children['userName'].value;
-    let password = formulario.children[1].children['password'].value;
-    console.log(password)
-    console.log(userName)
-}
-
-ingresar() */
-
-const password = document.getElementById('password')
-
-
 
 
 

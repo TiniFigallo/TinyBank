@@ -39,36 +39,3 @@ tablaUsuario.innerHTML= `
 home.appendChild(tablaUsuario)
   
 
-// MOVIMIENTOS
-
-let movimientos = JSON.parse(localStorage.getItem('movimientos')) || [];
-
-
-let movimientosVacios = document.createElement("h4")
-movimientosVacios.setAttribute("class", "movimientosh4")
-
-if(!movimientos.length) {
-    movimientosVacios.innerText = ("No realizaste ningun movimiento.")
-mov.append(movimientosVacios)
-} 
-
-
-const showMovimientos = () => {
- movimientosVacios.remove() 
-
-  movimientos.forEach((accion) => {
-    const liMovimientos = document.createElement('li')
-    liMovimientos.innerText += `${accion}`
-    movimientos.append(liMovimientos)
-  })
- }
-
- const addMov = (accion) => {
-  movimientos.push(accion)
-  showMovimientos()
-  localStorage.setItem("movimientos", JSON.stringify(movimientos));
-}
-
-
- 
-        
